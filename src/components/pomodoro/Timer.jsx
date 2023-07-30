@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Audio } from 'expo-av';
 
-import audioClik from '../assets/audio/pick-92276.mp3';
+// import audioClik from '../assets/audio/pick-92276.mp3';
 
 export default function Timer({ time, setTime, currentTime, setCurrentTime }) {
     const [btnIsActive, setBtnIsActive] = useState(false);
@@ -15,7 +15,7 @@ export default function Timer({ time, setTime, currentTime, setCurrentTime }) {
 
     async function playSounds() {
         const { sound } = await Audio.Sound.createAsync(
-            require('../assets/audio/pick-92276.mp3')
+            require('../../assets/audio/pick-92276.mp3')
         );
         await sound.playAsync();
     }
