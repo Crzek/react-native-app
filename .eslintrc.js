@@ -4,32 +4,22 @@ module.exports = {
         es2021: true,
         node: true,
     },
-    extends: [
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'standard',
-        'eslint-config-prettier',
-    ],
+    extends: ["standard", "plugin:react/recommended", "eslint-config-prettier"],
     overrides: [
         {
             env: {
                 node: true,
             },
-            files: ['.eslintrc.{js,cjs,jsx}'],
+            files: [".eslintrc.{js,cjs}"],
             parserOptions: {
-                sourceType: 'script',
+                sourceType: "script",
             },
         },
     ],
     parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        ecmaVersion: "latest",
+        sourceType: "module",
     },
-    plugins: ['react', 'react-native'],
-    rules: {
-        indent: ['error', 'tab'],
-        'linebreak-style': ['error', 'windows'],
-        quotes: ['error', 'double'],
-        semi: ['error', 'always'],
-    },
-}
+    plugins: ["react"],
+    rules: {},
+};
